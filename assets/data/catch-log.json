@@ -1,0 +1,400 @@
+{
+  "en": {
+    "meta": {
+      "title": "Pacific Panama 🇵🇦 Fishing Expeditions | World-Class Sport Fishing in Punta Burica",
+      "description": "Experience world-class sport fishing in the pristine waters of Punta Burica, Panama. Target marlin, sailfish, tuna, and roosterfish with our professional bilingual crew.",
+      "keywords": "Panama fishing, sport fishing, marlin, sailfish, Punta Burica, fishing charters, bilingual crew"
+    },
+    "navigation": {
+      "home": "Home",
+      "charters": "Charters",
+      "species": "Fish Species",
+      "catch-log": "Catch Log",
+      "gallery": "Gallery",
+      "contact": "Contact",
+      "language-toggle": "Español"
+    },
+    "hero": {
+      "title": "Pacific Panama 🇵🇦 Fishing Expeditions",
+      "subtitle": "World-Class Sport Fishing in the pristine waters of Punta Burica, South Pacific Panama",
+      "cta-primary": "Book Your Adventure",
+      "cta-secondary": "Call Now: +1 (970) 712-7973"
+    },
+    "features": {
+      "section-title": "Why Choose Pacific Panama Fishing?",
+      "section-subtitle": "Experience the untouched fishing frontier of Punta Burica with our professional bilingual crew",
+      "remote-waters": {
+        "title": "Remote Uncrowded Waters",
+        "description": "Fish in pristine waters with minimal boat traffic, offering you a peaceful and productive fishing experience."
+      },
+      "record-fish": {
+        "title": "Record-Class Fish",
+        "description": "Target trophy marlin, sailfish, tuna, and roosterfish in waters known for producing record-breaking catches."
+      },
+      "bilingual-crew": {
+        "title": "Bilingual Expert Crew",
+        "description": "Our experienced captains and crew speak both English and Spanish, ensuring clear communication throughout your trip."
+      },
+      "professional-equipment": {
+        "title": "Professional Equipment",
+        "description": "Top-quality fishing gear, safety equipment, and modern boats equipped with GPS, fish finders, and communication systems."
+      },
+      "customized-expeditions": {
+        "title": "Customized Expeditions",
+        "description": "Your adventure, your way. We tailor each trip to your skill level, preferences, and target species."
+      },
+      "unique-location": {
+        "title": "Unique Location",
+        "description": "Fish the border waters of Panama and Costa Rica, accessing diverse fishing grounds in one expedition."
+      }
+    },
+    "charters": {
+      "page-title": "Fishing Charters & Packages",
+      "page-subtitle": "Choose from our selection of expertly crafted fishing expeditions",
+      "half-day": {
+        "title": "Half Day Inshore",
+        "duration": "4 hours | Up to 4 anglers",
+        "price": "$800",
+        "features": [
+          "Target: Roosterfish, Snapper, Grouper",
+          "All tackle and bait included",
+          "Drinks and snacks provided",
+          "Bilingual crew"
+        ]
+      },
+      "full-day": {
+        "title": "Full Day Offshore",
+        "duration": "8 hours | Up to 6 anglers",
+        "price": "$1,600",
+        "features": [
+          "Target: Marlin, Sailfish, Tuna, Wahoo",
+          "Premium tackle included",
+          "Lunch and beverages",
+          "Professional photo service"
+        ]
+      },
+      "multi-day": {
+        "title": "Multi-Day Expedition",
+        "duration": "2 days | Up to 4 anglers",
+        "price": "$2,800",
+        "features": [
+          "All species targeted",
+          "Accommodation assistance",
+          "All meals included",
+          "Trophy fish processing"
+        ]
+      }
+    },
+    "species": {
+      "page-title": "Target Fish Species & Seasons",
+      "page-subtitle": "Discover the incredible variety of game fish in Punta Burica waters",
+      "blue-marlin": {
+        "name": "Blue Marlin",
+        "season": "Best: Dec-Apr",
+        "description": "The ultimate trophy fish. These giants can exceed 500lbs and provide the fight of a lifetime in our deep offshore waters."
+      },
+      "sailfish": {
+        "name": "Pacific Sailfish",
+        "season": "Best: Dec-Apr",
+        "description": "Lightning fast and acrobatic, sailfish are abundant in our waters and provide spectacular aerial displays when hooked."
+      },
+      "yellowfin-tuna": {
+        "name": "Yellowfin Tuna",
+        "season": "Year-round",
+        "description": "Powerful swimmers reaching 200+ lbs. Excellent table fare and known for their incredible speed and endurance."
+      },
+      "roosterfish": {
+        "name": "Roosterfish",
+        "season": "Best: Apr-Nov",
+        "description": "Iconic Pacific species with distinctive dorsal fin. Aggressive fighters found in coastal waters and around structure."
+      },
+      "wahoo": {
+        "name": "Wahoo",
+        "season": "Best: Nov-Mar",
+        "description": "The fastest fish in the ocean, capable of speeds over 60 mph. Known for long, screaming runs and excellent eating."
+      },
+      "cubera-snapper": {
+        "name": "Cubera Snapper",
+        "season": "Year-round",
+        "description": "Large bottom dwelling snappers that can reach 100+ lbs. Found around rocky reefs and structure, excellent table fare."
+      }
+    },
+    "catch-log": {
+      "page-title": "Daily Catch Log",
+      "page-subtitle": "Follow our recent adventures and see what's biting in Punta Burica waters"
+    },
+    "gallery": {
+      "page-title": "Photo Gallery",
+      "page-subtitle": "Witness the excitement and beauty of Pacific Panama fishing adventures"
+    },
+    "contact": {
+      "page-title": "Contact & Booking",
+      "page-subtitle": "Ready to experience world-class fishing in Panama? Let's plan your adventure!",
+      "get-in-touch": "Get in Touch",
+      "phone-us": "Phone/WhatsApp (US)",
+      "phone-panama": "Phone/WhatsApp (Panama)",
+      "email": "Email",
+      "location": "Location",
+      "location-value": "Punta Burica, South Pacific Panama",
+      "response-time": "Response Time",
+      "response-time-value": "Within 2 hours during business hours",
+      "why-book": "Why Book With Us?",
+      "book-form-title": "Book Your Expedition",
+      "form": {
+        "full-name": "Full Name",
+        "email": "Email",
+        "phone": "Phone/WhatsApp",
+        "charter-type": "Preferred Charter",
+        "select-charter": "Select Charter Type",
+        "half-day-option": "Half Day Inshore ($800)",
+        "full-day-option": "Full Day Offshore ($1,600)",
+        "multi-day-option": "Multi-Day Expedition ($2,800)",
+        "number-anglers": "Number of Anglers",
+        "select-number": "Select Number",
+        "preferred-date": "Preferred Date",
+        "experience-level": "Experience Level",
+        "select-experience": "Select Experience",
+        "beginner": "Beginner",
+        "intermediate": "Intermediate",
+        "advanced": "Advanced",
+        "special-requests": "Special Requests or Questions",
+        "special-requests-placeholder": "Tell us about your fishing goals, dietary restrictions, accommodation needs, etc.",
+        "submit": "Send Booking Request"
+      }
+    },
+    "footer": {
+      "description": "Experience world-class sport fishing in the pristine waters of Punta Burica, Panama. Our professional bilingual crew is dedicated to providing you with the fishing adventure of a lifetime.",
+      "quick-links": "Quick Links",
+      "contact-info": "Contact Info",
+      "fishing-seasons": "Fishing Seasons",
+      "peak-season": "Peak Season (Dec-Apr)",
+      "peak-species": "Marlin, Sailfish, Wahoo",
+      "year-round": "Year-Round",
+      "year-round-species": "Tuna, Snapper, Grouper",
+      "rooster-season": "Roosterfish (Apr-Nov)",
+      "available": "Available 7 days a week",
+      "copyright": "All rights reserved. | Professional sport fishing charters in Punta Burica, Panama"
+    },
+    "common": {
+      "book-now": "Book Now",
+      "call-now": "Call Now",
+      "learn-more": "Learn More",
+      "view-all": "View All",
+      "send": "Send",
+      "loading": "Loading...",
+      "sending": "Sending...",
+      "success": "Success",
+      "error": "Error",
+      "required": "This field is required",
+      "invalid-email": "Invalid email address",
+      "invalid-phone": "Invalid phone number",
+      "form-success": "Thank you! We have received your booking request. We will contact you within 2 hours.",
+      "form-error": "Please correct the errors in the form"
+    },
+    "cta": {
+      "title": "Ready for the Adventure of a Lifetime?",
+      "description": "Join us in the pristine waters of Punta Burica for an unforgettable fishing experience",
+      "book-trip": "Book Your Trip Now",
+      "view-packages": "View Packages"
+    }
+  },
+  "es": {
+    "meta": {
+      "title": "Expediciones de Pesca Pacific Panama 🇵🇦 | Pesca Deportiva de Clase Mundial en Punta Burica",
+      "description": "Experimenta pesca deportiva de clase mundial en las aguas prístinas de Punta Burica, Panamá. Apunta a marlín, pez vela, atún y pez gallo con nuestra tripulación bilingüe profesional.",
+      "keywords": "Pesca Panamá, pesca deportiva, marlín, pez vela, Punta Burica, chárteres de pesca, tripulación bilingüe"
+    },
+    "navigation": {
+      "home": "Inicio",
+      "charters": "Excursiones",
+      "species": "Especies",
+      "catch-log": "Registro",
+      "gallery": "Galería",
+      "contact": "Contacto",
+      "language-toggle": "English"
+    },
+    "hero": {
+      "title": "Expediciones de Pesca Pacific Panama 🇵🇦",
+      "subtitle": "Pesca deportiva de clase mundial en las aguas prístinas de Punta Burica, Pacífico Sur de Panamá",
+      "cta-primary": "Reserva tu Aventura",
+      "cta-secondary": "Llama: +1 (970) 712-7973"
+    },
+    "features": {
+      "section-title": "¿Por qué elegir Pacific Panama Fishing?",
+      "section-subtitle": "Experimenta la frontera de pesca virgen de Punta Burica con nuestro equipo bilingüe profesional",
+      "remote-waters": {
+        "title": "Aguas Remotas Sin Multitudes",
+        "description": "Pesca en aguas prístinas con mínimo tráfico de embarcaciones, ofreciéndote una experiencia tranquila y productiva."
+      },
+      "record-fish": {
+        "title": "Peces de Clase Récord",
+        "description": "Apunta a marlín trofeo, pez vela, atún y pez gallo en aguas conocidas por producir capturas récord."
+      },
+      "bilingual-crew": {
+        "title": "Tripulación Experta Bilingüe",
+        "description": "Nuestros capitanes y tripulación experimentados hablan inglés y español, asegurando comunicación clara durante tu viaje."
+      },
+      "professional-equipment": {
+        "title": "Equipo Profesional",
+        "description": "Equipo de pesca de alta calidad, equipo de seguridad y embarcaciones modernas con GPS, ecosondas y sistemas de comunicación."
+      },
+      "customized-expeditions": {
+        "title": "Expediciones Personalizadas",
+        "description": "Tu aventura, a tu manera. Adaptamos cada viaje a tu nivel de habilidad, preferencias y especies objetivo."
+      },
+      "unique-location": {
+        "title": "Ubicación Única",
+        "description": "Pesca en las aguas fronterizas de Panamá y Costa Rica, accediendo a diversos caladeros en una expedición."
+      }
+    },
+    "charters": {
+      "page-title": "Chárteres y Paquetes de Pesca",
+      "page-subtitle": "Elige de nuestra selección de expediciones de pesca expertamente diseñadas",
+      "half-day": {
+        "title": "Medio Día Cerca de Costa",
+        "duration": "4 horas | Hasta 4 pescadores",
+        "price": "$800",
+        "features": [
+          "Objetivo: Pez Gallo, Pargo, Mero",
+          "Todo el equipo y carnada incluidos",
+          "Bebidas y aperitivos incluidos",
+          "Tripulación bilingüe"
+        ]
+      },
+      "full-day": {
+        "title": "Día Completo Mar Adentro",
+        "duration": "8 horas | Hasta 6 pescadores",
+        "price": "$1,600",
+        "features": [
+          "Objetivo: Marlín, Pez Vela, Atún, Wahoo",
+          "Equipo premium incluido",
+          "Almuerzo y bebidas",
+          "Servicio de fotografía profesional"
+        ]
+      },
+      "multi-day": {
+        "title": "Expedición de Varios Días",
+        "duration": "2 días | Hasta 4 pescadores",
+        "price": "$2,800",
+        "features": [
+          "Todas las especies objetivo",
+          "Asistencia con alojamiento",
+          "Todas las comidas incluidas",
+          "Procesamiento de peces trofeo"
+        ]
+      }
+    },
+    "species": {
+      "page-title": "Especies Objetivo y Temporadas",
+      "page-subtitle": "Descubre la increíble variedad de peces deportivos en las aguas de Punta Burica",
+      "blue-marlin": {
+        "name": "Marlín Azul",
+        "season": "Mejor: Dic-Abr",
+        "description": "El pez trofeo definitivo. Estos gigantes pueden superar las 500 libras y brindar la pelea de tu vida en nuestras aguas profundas."
+      },
+      "sailfish": {
+        "name": "Pez Vela del Pacífico",
+        "season": "Mejor: Dic-Abr",
+        "description": "Veloces como el rayo y acrobáticos, los peces vela abundan en nuestras aguas y brindan espectáculos aéreos cuando son enganchados."
+      },
+      "yellowfin-tuna": {
+        "name": "Atún Aleta Amarilla",
+        "season": "Todo el año",
+        "description": "Nadadores poderosos que alcanzan más de 200 libras. Excelente para la mesa y conocidos por su velocidad y resistencia increíbles."
+      },
+      "roosterfish": {
+        "name": "Pez Gallo",
+        "season": "Mejor: Abr-Nov",
+        "description": "Especie icónica del Pacífico con aleta dorsal distintiva. Luchadores agresivos encontrados en aguas costeras y alrededor de estructuras."
+      },
+      "wahoo": {
+        "name": "Peto",
+        "season": "Mejor: Nov-Mar",
+        "description": "El pez más rápido del océano, capaz de velocidades de más de 60 mph. Conocido por corridas largas y excelente sabor."
+      },
+      "cubera-snapper": {
+        "name": "Pargo Cubera",
+        "season": "Todo el año",
+        "description": "Grandes pargos de fondo que pueden alcanzar más de 100 libras. Encontrados alrededor de arrecifes rocosos, excelente para la mesa."
+      }
+    },
+    "catch-log": {
+      "page-title": "Registro Diario de Capturas",
+      "page-subtitle": "Sigue nuestras aventuras recientes y ve qué está picando en las aguas de Punta Burica"
+    },
+    "gallery": {
+      "page-title": "Galería de Fotos",
+      "page-subtitle": "Presencia la emoción y belleza de las aventuras de pesca de Pacific Panama"
+    },
+    "contact": {
+      "page-title": "Contacto y Reservas",
+      "page-subtitle": "¿Listo para experimentar pesca de clase mundial en Panamá? ¡Planifiquemos tu aventura!",
+      "get-in-touch": "Contáctanos",
+      "phone-us": "Teléfono/WhatsApp (EE.UU.)",
+      "phone-panama": "Teléfono/WhatsApp (Panamá)",
+      "email": "Correo Electrónico",
+      "location": "Ubicación",
+      "location-value": "Punta Burica, Pacífico Sur de Panamá",
+      "response-time": "Tiempo de Respuesta",
+      "response-time-value": "Dentro de 2 horas en horario comercial",
+      "why-book": "¿Por Qué Reservar Con Nosotros?",
+      "book-form-title": "Reserva Tu Expedición",
+      "form": {
+        "full-name": "Nombre Completo",
+        "email": "Correo Electrónico",
+        "phone": "Teléfono/WhatsApp",
+        "charter-type": "Charter Preferido",
+        "select-charter": "Selecciona Tipo de Charter",
+        "half-day-option": "Medio Día Cerca Costa ($800)",
+        "full-day-option": "Día Completo Mar Adentro ($1,600)",
+        "multi-day-option": "Expedición Varios Días ($2,800)",
+        "number-anglers": "Número de Pescadores",
+        "select-number": "Seleccionar Número",
+        "preferred-date": "Fecha Preferida",
+        "experience-level": "Nivel de Experiencia",
+        "select-experience": "Seleccionar Experiencia",
+        "beginner": "Principiante",
+        "intermediate": "Intermedio",
+        "advanced": "Avanzado",
+        "special-requests": "Solicitudes Especiales o Preguntas",
+        "special-requests-placeholder": "Cuéntanos sobre tus objetivos de pesca, restricciones dietéticas, necesidades de alojamiento, etc.",
+        "submit": "Enviar Solicitud de Reserva"
+      }
+    },
+    "footer": {
+      "description": "Experimenta pesca deportiva de clase mundial en las aguas prístinas de Punta Burica, Panamá. Nuestra tripulación bilingüe profesional se dedica a brindarte la aventura de pesca de tu vida.",
+      "quick-links": "Enlaces Rápidos",
+      "contact-info": "Información de Contacto",
+      "fishing-seasons": "Temporadas de Pesca",
+      "peak-season": "Temporada Alta (Dic-Abr)",
+      "peak-species": "Marlín, Pez Vela, Wahoo",
+      "year-round": "Todo el Año",
+      "year-round-species": "Atún, Pargo, Mero",
+      "rooster-season": "Pez Gallo (Abr-Nov)",
+      "available": "Disponible 7 días a la semana",
+      "copyright": "Todos los derechos reservados. | Chárteres profesionales de pesca deportiva en Punta Burica, Panamá"
+    },
+    "common": {
+      "book-now": "Reservar",
+      "call-now": "Llamar",
+      "learn-more": "Aprender Más",
+      "view-all": "Ver Todo",
+      "send": "Enviar",
+      "loading": "Cargando...",
+      "sending": "Enviando...",
+      "success": "Éxito",
+      "error": "Error",
+      "required": "Este campo es requerido",
+      "invalid-email": "Correo electrónico inválido",
+      "invalid-phone": "Número de teléfono inválido",
+      "form-success": "¡Gracias! Hemos recibido tu solicitud de reserva. Te contactaremos dentro de 2 horas.",
+      "form-error": "Por favor, corrija los errores en el formulario"
+    },
+    "cta": {
+      "title": "¿Listo para la Aventura de tu Vida?",
+      "description": "Únete a nosotros en las aguas prístinas de Punta Burica para una experiencia de pesca inolvidable",
+      "book-trip": "Reserva tu Viaje Ahora",
+      "view-packages": "Ver Paquetes"
+    }
+  }
+}
