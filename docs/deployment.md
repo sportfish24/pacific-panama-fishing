@@ -1,315 +1,597 @@
-# Deployment Guide
+# Development Guide
 ## Pacific Panama 🇵🇦 Fishing Expeditions
 
-This document provides comprehensive instructions for deploying the Pacific Panama Fishing website to various hosting platforms.
+This document provides comprehensive instructions for developers working on the Pacific Panama Fishing website.
 
-## Prerequisites
+## Project Overview
 
-Before deploying, ensure you have:
-- A complete copy of the repository
-- Access to your chosen hosting platform
-- Domain name (if using custom domain)
-- SSL certificate (recommended)
+The Pacific Panama Fishing website is a modern, bilingual (English/Spanish) static website built with:
+- **HTML5** - Semantic markup
+- **CSS3** - Modern styling with CSS variables
+- **Vanilla JavaScript** - No framework dependencies
+- **Mobile-first design** - Responsive across all devices
+- **SEO optimized** - Search engine friendly structure
 
-## Deployment Options
+## Development Environment Setup
 
-### 1. GitHub Pages (Free)
+### Prerequisites
 
-GitHub Pages is an excellent free option for static websites.
+1. **Code Editor**
+   - VS Code (recommended)
+   - Sublime Text
+   - Atom
+   - WebStorm
 
-#### Setup Steps:
-1. **Push to GitHub Repository**
+2. **Local Web Server**
+   - Live Server (VS Code extension) - recommended
+   - Python: `python -m http.server 8000`
+   - Node.js: `npx http-server`
+   - XAMPP/WAMP (if using PHP features)
+
+3. **Browser Developer Tools**
+   - Chrome DevTools (recommended)
+   - Firefox Developer Tools
+   - Safari Web Inspector
+
+4. **Git Version Control**
    ```bash
-   git init
-   git add .
-   git commit -m "Initial commit"
-   git branch -M main
-   git remote add origin https://github.com/yourusername/pacific-panama-fishing.git
-   git push -u origin main
+   git --version
+   # If not installed, download from git-scm.com
    ```
 
-2. **Enable GitHub Pages**
-   - Go to repository Settings
-   - Scroll to "Pages" section
-   - Select "Deploy from branch"
-   - Choose "main" branch
-   - Select "/ (root)" folder
-   - Save settings
+### Recommended VS Code Extensions
 
-3. **Access Your Site**
-   - Your site will be available at: `https://yourusername.github.io/pacific-panama-fishing`
-   - Custom domain can be configured in Pages settings
+```json
+{
+  "recommendations": [
+    "ms-vscode.vscode-typescript-next",
+    "ritwickdey.liveserver",
+    "esbenp.prettier-vscode",
+    "ms-vscode.vscode-json",
+    "bradlc.vscode-tailwindcss",
+    "formulahendry.auto-rename-tag",
+    "ms-vscode.vscode-css-peek"
+  ]
+}
+```
 
-#### GitHub Pages Configuration:
-- Build time: ~1-2 minutes
-- SSL: Automatically provided
-- CDN: Global distribution included
-- Updates: Automatic on git push
+### Initial Setup
 
-### 2. Vercel (Recommended)
-
-Vercel offers excellent performance and easy deployment for static sites.
-
-#### Setup Steps:
-1. **Connect Repository**
-   - Sign up at [vercel.com](https://vercel.com)
-   - Click "New Project"
-   - Import your GitHub repository
-
-2. **Configure Build Settings**
-   ```
-   Framework Preset: Other
-   Build Command: (leave empty)
-   Output Directory: (leave empty)
-   Install Command: (leave empty)
-   ```
-
-3. **Environment Variables** (if needed)
-   - Add any environment variables in Vercel dashboard
-   - Common variables: `CONTACT_EMAIL`, `ANALYTICS_ID`
-
-4. **Deploy**
-   - Click "Deploy"
-   - Vercel will provide a URL like `pacific-panama-fishing.vercel.app`
-
-#### Vercel Features:
-- Automatic SSL
-- Global CDN
-- Instant deployment
-- Branch previews
-- Custom domains
-
-### 3. Netlify
-
-Netlify is another excellent option for static site hosting.
-
-#### Setup Steps:
-1. **Connect Repository**
-   - Sign up at [netlify.com](https://netlify.com)
-   - Click "New site from Git"
-   - Choose GitHub and select repository
-
-2. **Build Settings**
-   ```
-   Build command: (leave empty)
-   Publish directory: (leave empty or "./")
-   ```
-
-3. **Deploy**
-   - Site will be available at random subdomain
-   - Custom domain can be added in site settings
-
-#### Netlify Features:
-- Form handling
-- Edge functions
-- Split testing
-- Analytics
-- Identity management
-
-### 4. Traditional Web Hosting
-
-For shared hosting or VPS deployment:
-
-#### File Upload Method:
-1. **Prepare Files**
+1. **Clone Repository**
    ```bash
-   # Create production build
-   cp -r . /path/to/upload/folder
-   # Remove development files
-   rm -rf .git node_modules .vscode
+   git clone https://github.com/yourusername/pacific-panama-fishing.git
+   cd pacific-panama-fishing
    ```
 
-2. **Upload via FTP/SFTP**
-   - Use FileZilla, WinSCP, or similar
-   - Upload all files to public_html or www directory
-   - Ensure file permissions are correct (644 for files, 755 for directories)
-
-3. **Configure Domain**
-   - Point domain A record to server IP
-   - Set up SSL certificate
-   - Configure redirects if needed
-
-## Domain Configuration
-
-### Custom Domain Setup:
-
-1. **DNS Configuration**
+2. **Start Development Server**
+   ```bash
+   # Using Live Server in VS Code (right-click index.html -> "Open with Live Server")
+   # OR using Python
+   python -m http.server 8000
+   # OR using Node.js
+   npx http-server -p 8000
    ```
-   Type: A
-   Name: @
-   Value: [Your hosting IP]
+
+3. **Open in Browser**
+   - Navigate to `http://localhost:8000`
+   - Test responsive design using browser dev tools
+
+## Project Structure Deep Dive
+
+```
+pacific-panama-fishing/
+├── index.html                 # Homepage
+├── assets/                    # Static assets
+│   ├── css/
+│   │   ├── main.css          # Core styles
+│   │   └── responsive.css    # Mobile responsiveness
+│   ├── js/
+│   │   ├── main.js           # Core functionality
+│   │   ├── language.js       # Bilingual system
+│   │   └── navigation.js     # Navigation handling
+│   ├── images/               # Image assets
+│   │   ├── logo/            # Brand logos
+│   │   ├── fish-species/    # Fish photos
+│   │   ├── gallery/         # Gallery images
+│   │   └── backgrounds/     # Background images
+│   └── data/                # JSON data files
+│       ├── translations.json # Language translations
+│       └── catch-log.json    # Fishing log entries
+├── pages/                   # Individual pages
+│   ├── charters.html
+│   ├── species.html
+│   ├── catch-log.html
+│   ├── gallery.html
+│   └── contact.html
+├── components/              # Reusable components
+│   ├── header.html
+│   ├── footer.html
+│   └── navigation.html
+└── docs/                   # Documentation
+    ├── deployment.md
+    └── development.md
+```
+
+## Coding Standards
+
+### HTML Guidelines
+
+1. **Semantic HTML**
+   ```html
+   <!-- Good -->
+   <nav class="navbar">
+     <ul class="nav-menu">
+       <li><a href="#" class="nav-link">Home</a></li>
+     </ul>
+   </nav>
    
-   Type: CNAME
-   Name: www
-   Value: yourdomain.com
+   <!-- Avoid -->
+   <div class="navbar">
+     <div class="nav-menu">
+       <div><a href="#">Home</a></div>
+     </div>
+   </div>
    ```
 
-2. **SSL Certificate**
-   - Most modern hosts provide free SSL via Let's Encrypt
-   - Ensure HTTPS redirect is enabled
-   - Update any hardcoded HTTP links to HTTPS
+2. **Accessibility**
+   ```html
+   <!-- Include proper ARIA labels -->
+   <button aria-expanded="false" aria-controls="nav-menu">Menu</button>
+   
+   <!-- Use semantic headings -->
+   <h1>Main Title</h1>
+   <h2>Section Title</h2>
+   <h3>Subsection Title</h3>
+   
+   <!-- Proper alt text -->
+   <img src="marlin.jpg" alt="450lb Blue Marlin caught off Punta Burica">
+   ```
 
-3. **Email Setup**
-   - Configure email forwarding for info@pacificpanamafishing.com
-   - Set up Google Workspace or similar for professional email
+3. **Bilingual Content**
+   ```html
+   <!-- Use language spans for all user-facing text -->
+   <h1>
+     <span class="lang-en">Pacific Panama Fishing</span>
+     <span class="lang-es">Pesca Pacific Panama</span>
+   </h1>
+   ```
+
+### CSS Guidelines
+
+1. **CSS Variables**
+   ```css
+   /* Use CSS variables for consistency */
+   :root {
+     --primary-blue: #0066cc;
+     --sunset-orange: #ff6b35;
+     --spacing-md: 30px;
+   }
+   
+   .feature-card {
+     color: var(--primary-blue);
+     margin: var(--spacing-md);
+   }
+   ```
+
+2. **Mobile-First Approach**
+   ```css
+   /* Base styles for mobile */
+   .container {
+     padding: 0 15px;
+   }
+   
+   /* Tablet and up */
+   @media (min-width: 768px) {
+     .container {
+       padding: 0 30px;
+     }
+   }
+   
+   /* Desktop and up */
+   @media (min-width: 1024px) {
+     .container {
+       max-width: 1200px;
+       margin: 0 auto;
+     }
+   }
+   ```
+
+3. **BEM Methodology (when applicable)**
+   ```css
+   .pricing-card { }
+   .pricing-card__title { }
+   .pricing-card__price { }
+   .pricing-card--featured { }
+   ```
+
+### JavaScript Guidelines
+
+1. **ES6+ Features**
+   ```javascript
+   // Use const/let instead of var
+   const apiEndpoint = 'https://api.example.com';
+   let currentLanguage = 'en';
+   
+   // Arrow functions
+   const toggleLanguage = () => {
+     currentLanguage = currentLanguage === 'en' ? 'es' : 'en';
+   };
+   
+   // Template literals
+   const message = `Current language: ${currentLanguage}`;
+   
+   // Destructuring
+   const { name, email, phone } = formData;
+   ```
+
+2. **Error Handling**
+   ```javascript
+   async function loadTranslations() {
+     try {
+       const response = await fetch('assets/data/translations.json');
+       if (!response.ok) {
+         throw new Error(`HTTP error! status: ${response.status}`);
+       }
+       const data = await response.json();
+       return data;
+     } catch (error) {
+       console.error('Failed to load translations:', error);
+       // Fallback behavior
+       return defaultTranslations;
+     }
+   }
+   ```
+
+3. **Event Delegation**
+   ```javascript
+   // Efficient event handling
+   document.addEventListener('click', (event) => {
+     if (event.target.matches('.nav-link')) {
+       handleNavigation(event);
+     }
+     if (event.target.matches('.species-image')) {
+       openLightbox(event);
+     }
+   });
+   ```
+
+## Bilingual Development
+
+### Translation System
+
+1. **Translation Keys**
+   ```javascript
+   // Use descriptive, hierarchical keys
+   {
+     "navigation": {
+       "home": "Home",
+       "charters": "Charters"
+     },
+     "hero": {
+       "title": "Pacific Panama Fishing",
+       "subtitle": "World-class sport fishing"
+     }
+   }
+   ```
+
+2. **Dynamic Content Updates**
+   ```javascript
+   function updateContent(language) {
+     document.querySelectorAll('[data-translate]').forEach(element => {
+       const key = element.getAttribute('data-translate');
+       const translation = getTranslation(key, language);
+       element.textContent = translation;
+     });
+   }
+   ```
+
+3. **Form Translations**
+   ```html
+   <!-- Use data attributes for form elements -->
+   <input type="text" data-placeholder="form.name" required>
+   <label data-translate="form.email">Email</label>
+   ```
+
+## Component Development
+
+### Reusable Components
+
+1. **Navigation Component**
+   ```html
+   <!-- components/navigation.html -->
+   <nav class="navbar" id="navbar">
+     <!-- Navigation content -->
+   </nav>
+   ```
+
+2. **Footer Component**
+   ```html
+   <!-- components/footer.html -->
+   <footer class="footer">
+     <!-- Footer content -->
+   </footer>
+   ```
+
+3. **Including Components** (for future PHP/SSG integration)
+   ```php
+   <?php include 'components/navigation.html'; ?>
+   ```
+
+### Form Components
+
+1. **Contact Form Enhancement**
+   ```javascript
+   class ContactForm {
+     constructor(formElement) {
+       this.form = formElement;
+       this.bindEvents();
+     }
+     
+     bindEvents() {
+       this.form.addEventListener('submit', this.handleSubmit.bind(this));
+       this.form.addEventListener('input', this.handleInput.bind(this));
+     }
+     
+     handleSubmit(event) {
+       event.preventDefault();
+       // Form submission logic
+     }
+   }
+   ```
 
 ## Performance Optimization
 
-### Pre-Deployment Checklist:
+### Image Optimization
 
-1. **Image Optimization**
-   - Compress all images using tools like TinyPNG
-   - Use appropriate image formats (WebP where supported)
-   - Implement lazy loading for gallery images
-
-2. **CSS/JS Optimization**
-   - Minify CSS and JavaScript files
-   - Remove unused CSS rules
-   - Combine multiple CSS/JS files where possible
-
-3. **SEO Optimization**
-   - Verify all meta tags are present
-   - Check that hreflang tags are implemented
-   - Ensure sitemap.xml is created and submitted
-
-4. **Performance Testing**
-   - Run Google PageSpeed Insights
-   - Test with GTmetrix
-   - Verify mobile responsiveness
-
-## Post-Deployment Setup
-
-### Analytics Configuration:
-
-1. **Google Analytics 4**
+1. **Responsive Images**
    ```html
-   <!-- Add to all HTML files before closing </head> -->
-   <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-   <script>
-     window.dataLayer = window.dataLayer || [];
-     function gtag(){dataLayer.push(arguments);}
-     gtag('js', new Date());
-     gtag('config', 'GA_MEASUREMENT_ID');
-   </script>
+   <picture>
+     <source media="(min-width: 768px)" srcset="marlin-large.webp">
+     <source media="(min-width: 480px)" srcset="marlin-medium.webp">
+     <img src="marlin-small.webp" alt="Blue Marlin" loading="lazy">
+   </picture>
    ```
 
-2. **Google Search Console**
-   - Add and verify your domain
-   - Submit sitemap.xml
-   - Monitor search performance
-
-3. **Facebook Pixel** (if using Facebook ads)
-   ```html
-   <!-- Add Facebook Pixel code -->
-   <script>
-     !function(f,b,e,v,n,t,s)
-     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-     if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-     n.queue=[];t=b.createElement(e);t.async=!0;
-     t.src=v;s=b.getElementsByTagName(e)[0];
-     s.parentNode.insertBefore(t,s)}(window, document,'script',
-     'https://connect.facebook.net/en_US/fbevents.js');
-     fbq('init', 'YOUR_PIXEL_ID');
-     fbq('track', 'PageView');
-   </script>
+2. **Lazy Loading**
+   ```javascript
+   // Intersection Observer for lazy loading
+   const imageObserver = new IntersectionObserver((entries, observer) => {
+     entries.forEach(entry => {
+       if (entry.isIntersecting) {
+         const img = entry.target;
+         img.src = img.dataset.src;
+         img.classList.remove('lazy');
+         observer.unobserve(img);
+       }
+     });
+   });
+   
+   document.querySelectorAll('img[data-src]').forEach(img => {
+     imageObserver.observe(img);
+   });
    ```
 
-### Form Handling Setup:
+### CSS Optimization
 
-1. **Netlify Forms** (if using Netlify)
-   - Add `netlify` attribute to forms
-   - Configure form notifications
-   - Set up spam protection
+1. **Critical CSS**
+   ```html
+   <!-- Inline critical CSS for above-the-fold content -->
+   <style>
+     /* Critical styles here */
+   </style>
+   ```
 
-2. **Formspree** (for other hosts)
-   - Sign up at formspree.io
-   - Update form action URLs
-   - Configure email notifications
+2. **CSS Loading**
+   ```html
+   <!-- Preload important CSS -->
+   <link rel="preload" href="assets/css/main.css" as="style">
+   <link rel="stylesheet" href="assets/css/main.css">
+   ```
 
-3. **Custom Backend** (advanced)
-   - Set up Node.js/PHP backend for form processing
-   - Implement email sending functionality
-   - Add spam protection with reCAPTCHA
+### JavaScript Optimization
 
-## Security Considerations
+1. **Code Splitting**
+   ```javascript
+   // Load non-critical scripts asynchronously
+   function loadScript(src) {
+     const script = document.createElement('script');
+     script.src = src;
+     script.async = true;
+     document.head.appendChild(script);
+   }
+   
+   // Load analytics after page load
+   window.addEventListener('load', () => {
+     loadScript('https://www.googletagmanager.com/gtag/js?id=GA_ID');
+   });
+   ```
 
-### Security Headers:
-```
-X-Frame-Options: DENY
-X-Content-Type-Options: nosniff
-X-XSS-Protection: 1; mode=block
-Referrer-Policy: strict-origin-when-cross-origin
-Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';
-```
+## Testing Guidelines
 
-### Regular Maintenance:
-- Monitor for broken links
-- Update contact information as needed
-- Refresh catch log entries regularly
-- Update fish photos seasonally
-- Review and update pricing annually
+### Browser Testing
 
-## Backup Strategy
+1. **Cross-Browser Compatibility**
+   - Chrome (latest)
+   - Firefox (latest)
+   - Safari (latest)
+   - Edge (latest)
+   - Mobile browsers (iOS Safari, Chrome Mobile)
 
-1. **Repository Backup**
-   - Maintain GitHub repository as primary backup
-   - Use multiple remotes if desired
-   - Tag releases for version control
+2. **Device Testing**
+   ```javascript
+   // Test responsive breakpoints
+   const breakpoints = {
+     mobile: '480px',
+     tablet: '768px',
+     desktop: '1024px',
+     large: '1200px'
+   };
+   ```
 
-2. **Content Backup**
-   - Regular database exports (if dynamic content added)
-   - Image backups to cloud storage
-   - Form submission exports
+### Accessibility Testing
 
-## Monitoring and Maintenance
+1. **Tools**
+   - axe-core browser extension
+   - WAVE Web Accessibility Evaluator
+   - Lighthouse accessibility audit
 
-### Performance Monitoring:
-- Set up Google PageSpeed monitoring
-- Monitor Core Web Vitals
-- Track loading times across different locations
+2. **Manual Testing**
+   - Keyboard navigation
+   - Screen reader compatibility
+   - Color contrast ratios
+   - Focus indicators
 
-### Uptime Monitoring:
-- Use UptimeRobot or similar service
-- Set up email alerts for downtime
-- Monitor from multiple global locations
+### Performance Testing
 
-### Content Updates:
-- Update catch log entries weekly
-- Refresh gallery photos monthly
-- Review and update pricing seasonally
-- Update fishing season information annually
+1. **Tools**
+   - Google PageSpeed Insights
+   - GTmetrix
+   - WebPageTest
+   - Lighthouse
 
-## Troubleshooting
+2. **Metrics to Monitor**
+   - First Contentful Paint (FCP)
+   - Largest Contentful Paint (LCP)
+   - First Input Delay (FID)
+   - Cumulative Layout Shift (CLS)
 
-### Common Issues:
+## Debugging
 
-1. **CSS/JS Not Loading**
-   - Check file paths (relative vs absolute)
-   - Verify MIME types are set correctly
-   - Clear browser cache
+### Common Issues
 
-2. **Form Submissions Not Working**
-   - Verify form action URLs
-   - Check spam folder for notifications
-   - Test with different email providers
+1. **Language Toggle Problems**
+   ```javascript
+   // Debug language switching
+   console.log('Current language:', document.body.classList.contains('spanish') ? 'es' : 'en');
+   console.log('localStorage language:', localStorage.getItem('pacific-panama-language'));
+   ```
 
-3. **Mobile Display Issues**
-   - Test on actual devices
-   - Use browser developer tools
-   - Verify viewport meta tag
+2. **Mobile Menu Issues**
+   ```javascript
+   // Debug mobile menu
+   const mobileMenu = document.querySelector('.nav-menu');
+   console.log('Mobile menu classes:', mobileMenu.className);
+   console.log('Mobile menu display:', getComputedStyle(mobileMenu).display);
+   ```
 
-4. **Language Toggle Not Working**
-   - Check JavaScript console for errors
-   - Verify translation files are loaded
-   - Test localStorage functionality
+3. **Form Validation**
+   ```javascript
+   // Debug form validation
+   function debugForm(form) {
+     const formData = new FormData(form);
+     for (let [key, value] of formData.entries()) {
+       console.log(key, value);
+     }
+   }
+   ```
 
-## Support Contacts
+### Browser Developer Tools
 
-For deployment assistance:
-- Repository issues: Create GitHub issue
-- Hosting support: Contact your hosting provider
-- Domain issues: Contact domain registrar
-- SSL problems: Check with hosting provider
+1. **Console Commands**
+   ```javascript
+   // Test language switching
+   window.languageManager.setLanguage('es');
+   
+   // Test navigation
+   window.navigationManager.navigateToPage('charters.html');
+   
+   // Check form validation
+   window.pacificPanamaApp.validateField(document.getElementById('email'));
+   ```
 
-Remember to keep all credentials secure and never commit sensitive information to the repository.
+## Version Control
+
+### Git Workflow
+
+1. **Branch Naming**
+   ```bash
+   git checkout -b feature/species-page-enhancement
+   git checkout -b fix/mobile-navigation-bug
+   git checkout -b hotfix/contact-form-issue
+   ```
+
+2. **Commit Messages**
+   ```bash
+   git commit -m "feat: add species page with detailed fish information"
+   git commit -m "fix: resolve mobile navigation menu overlay issue"
+   git commit -m "docs: update deployment guide with Vercel instructions"
+   ```
+
+3. **Pull Request Process**
+   - Create feature branch
+   - Make changes and test thoroughly
+   - Submit pull request with detailed description
+   - Code review and approval
+   - Merge to main branch
+
+## Deployment Preparation
+
+### Pre-Deployment Checklist
+
+1. **Code Quality**
+   - [ ] HTML validates (W3C Validator)
+   - [ ] CSS validates
+   - [ ] JavaScript has no console errors
+   - [ ] All images have alt text
+   - [ ] All links work correctly
+
+2. **Performance**
+   - [ ] Images optimized
+   - [ ] CSS/JS minified (if applicable)
+   - [ ] Lighthouse score > 90
+   - [ ] Mobile-friendly test passes
+
+3. **Content**
+   - [ ] All text reviewed for accuracy
+   - [ ] Contact information verified
+   - [ ] Pricing information current
+   - [ ] Catch log entries recent
+
+4. **SEO**
+   - [ ] Meta descriptions present
+   - [ ] Title tags optimized
+   - [ ] Structured data implemented
+   - [ ] Sitemap.xml created
+
+## Future Enhancements
+
+### Planned Features
+
+1. **Content Management**
+   - Admin panel for catch log entries
+   - Image upload system
+   - Dynamic pricing updates
+
+2. **Booking System**
+   - Real-time availability calendar
+   - Online payment processing
+   - Automatic confirmation emails
+
+3. **Analytics Integration**
+   - Enhanced user tracking
+   - Conversion funnel analysis
+   - A/B testing framework
+
+4. **Progressive Web App**
+   - Service worker implementation
+   - Offline functionality
+   - App-like experience
+
+## Support and Resources
+
+### Documentation
+- [MDN Web Docs](https://developer.mozilla.org/)
+- [W3C Web Standards](https://www.w3.org/)
+- [Can I Use](https://caniuse.com/) - Browser compatibility
+
+### Tools
+- [Lighthouse](https://developers.google.com/web/tools/lighthouse)
+- [axe Accessibility Checker](https://www.deque.com/axe/)
+- [GTmetrix](https://gtmetrix.com/)
+
+### Community
+- Stack Overflow for technical questions
+- GitHub Issues for project-specific problems
+- Web development communities for best practices
+
+Remember to keep this documentation updated as the project evolves and new features are added.
